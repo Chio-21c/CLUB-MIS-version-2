@@ -6,18 +6,14 @@ import { fn, col } from "sequelize";
 
 export const dashboard = async (req, res) => {
   try {
-    // Total approved members
     const totalMembers = await Membership.count({
       where: { status: "approved" },
     });
 
-    // Total clubs
     const totalClubs = await Club.count();
 
-    // Total patrons
     const totalPatrons = await Patron.count();
 
-    // Members per club with club names
     const membersPerClubRaw = await Membership.findAll({
       attributes: [
         "clubId",

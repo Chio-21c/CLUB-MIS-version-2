@@ -2,7 +2,7 @@ import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
 import path from "path";
 
-// Explicitly load .env from backend folder
+
 dotenv.config({ path: path.resolve("./backend/.env") });
 
 export const sequelize = new Sequelize(

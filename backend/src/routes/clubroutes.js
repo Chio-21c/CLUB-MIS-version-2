@@ -1,4 +1,3 @@
-// src/routes/clubRoutes.js
 import express from "express";
 import {
   createClub,

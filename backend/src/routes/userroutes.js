@@ -4,7 +4,6 @@ import User from "../models/user.js";
 
 const router = Router();
 
-// admin role....access
 router.get("/", requireAuth, async (req, res) => {
   try {
     const { role, status } = req.query;

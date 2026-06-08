@@ -1,4 +1,3 @@
-// src/routes/dashboardRoutes.js
 import { Router } from "express";
 import { dashboard } from "../controller/dashboardcontroller.js";
 

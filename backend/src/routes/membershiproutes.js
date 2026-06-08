@@ -1,4 +1,3 @@
-// src/routes/membershipRoutes.js
 import { Router } from "express";
 import {
   registerStudent,

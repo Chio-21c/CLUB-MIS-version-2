@@ -1,11 +1,10 @@
 import { Membership, Club, Patron } from "../models/index.js";
 
-// Student registers for a club (no login required)
+// Student registers for a club
 export const registerStudent = async (req, res) => {
   try {
     const { clubId, admissionNo, name, className, gender } = req.body;
 
-    // Prevent duplicate admission numbers
     const exists = await Membership.findOne({
       where: { admissionNo, clubId },
     });

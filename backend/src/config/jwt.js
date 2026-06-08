@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-//singing tokens and payloads
+//singing tokens and payloads and setting expiration time
 export const signToken = (payload) => {
   return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "20min" });
 };

@@ -1,6 +1,5 @@
 import { Club, Patron } from "../models/index.js";
 
-// Create a new club
 export const createClub = async (req, res) => {
   try {
     const { name, description } = req.body;
@@ -60,7 +59,6 @@ export const updateClub = async (req, res) => {
   }
 };
 
-// Delete club
 export const deleteClub = async (req, res) => {
   try {
     const club = await Club.findByPk(req.params.id);
